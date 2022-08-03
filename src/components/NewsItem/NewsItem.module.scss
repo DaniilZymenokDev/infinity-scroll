@@ -1,0 +1,10 @@
+.newsitem {
+  border-bottom:1px solid #CFCFCF;
+  border-top:1px solid #CFCFCF;
+  &>td>p:first-child{
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 27px;
+    margin-bottom: -.3%;
+  }
+}

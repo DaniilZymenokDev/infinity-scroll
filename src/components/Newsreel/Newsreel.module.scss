@@ -1,0 +1,14 @@
+.newsreel{
+  width: 60%;
+  margin: 5% auto;
+  &>table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  &>table>tr{
+    outline: black;
+  }
+  &>table>tr>td{
+    padding: 0px 10px;
+  }
+}
