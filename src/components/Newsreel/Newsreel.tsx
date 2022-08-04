@@ -13,9 +13,9 @@ const Newsreel = () => {
             <table>
                 <tbody>
                     {
-                        articles.map((item:any)=>{
+                        articles.length ? articles.map((item:any)=>{
                             return <NewsItem key={item.id} id={item.id} title={item.title} description={item.body}/>
-                        })
+                        }): <h2>Nothing to read...</h2>
                     }
                 </tbody>
             </table>
