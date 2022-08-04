@@ -1,14 +1,22 @@
 import React from 'react';
 import styles from './NewsItem.module.scss'
 
-const NewsItem = () => {
+type PropTypes = {
+    id: number,
+    title: string,
+    description: string
+}
+
+const NewsItem = (props: PropTypes) => {
     return (
         <tr className={styles.newsitem}>
             <td>
-                <p>Title</p>
-                <p>Description</p>
+                <p>{props.id}</p>
+                <p><strong>{props.title}</strong></p>
+                <p>{props.description}</p>
             </td>
         </tr>
+
     );
 };
 

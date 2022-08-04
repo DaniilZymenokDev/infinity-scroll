@@ -1,22 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NewsItem from "../NewsItem/NewsItem";
 import styles from './Newsreel.module.scss'
 import articlesData from '../../back/data'
 
 
 const Newsreel = () => {
-    console.log(articlesData)
+    const [articles, setArticles] = useState(articlesData)
+
     return (
         <div className={styles.newsreel}>
             <h1>Newsreel</h1>
             <table>
                 <tbody>
-                    <NewsItem/>
                     {
-                        articlesData.map((item=>{item.id, item.title, item.body})=>({}))
+                        articles.map((item:any)=>{
+                            return <NewsItem key={item.id} id={item.id} title={item.title} description={item.body}/>
+                        })
                     }
                 </tbody>
-
             </table>
         </div>
     );
