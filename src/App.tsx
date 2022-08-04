@@ -1,8 +1,10 @@
-import React, {ReactEventHandler, useEffect} from 'react';
+import React, {ReactEventHandler, useEffect, useState} from 'react';
 import Newsreel from "./components/Newsreel/Newsreel";
 import {Logger} from "sass";
+import articlesData from "./back/data";
 
 function App() {
+
 
     useEffect(()=>{
         document.addEventListener('scroll', scrollHandler)
@@ -11,7 +13,9 @@ function App() {
         }
     },[])
     const scrollHandler = (e:any):void =>{
-        console.log('scroll')
+        if (e.target.documentElement.scrollHeight-(e.target.documentElement.scrollTop+window.innerHeight)<100){
+            console.log('scroll')
+        }
     }
 
     return (

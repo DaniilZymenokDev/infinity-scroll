@@ -5,7 +5,7 @@ import articlesData from '../../back/data'
 
 
 const Newsreel = () => {
-    const [articles, setArticles] = useState(articlesData)
+
 
     return (
         <div className={styles.newsreel}>
